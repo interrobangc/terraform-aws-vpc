@@ -19,6 +19,7 @@ module "vpc" {
   database_subnets             = ["${var.database_subnets}"]
 
   enable_nat_gateway = "${var.enable_nat_gateway}"
+  single_nat_gateway = "${var.single_nat_gateway}"
   enable_vpn_gateway = "${var.enable_vpn_gateway}"
 
   tags = {

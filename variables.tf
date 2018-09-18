@@ -47,6 +47,11 @@ variable "enable_nat_gateway" {
   default     = true
 }
 
+variable "single_nat_gateway" {
+  description = "Should be true if you want to provision a single shared NAT Gateway across all of your private networks"
+  default     = false
+}
+
 variable "enable_vpn_gateway" {
   description = "Should be true if you want to create a new VPN Gateway resource and attach it to the VPC"
   default     = false
