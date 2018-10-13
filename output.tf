@@ -13,6 +13,11 @@ output "database_subnets" {
   value       = ["${module.vpc.database_subnets}"]
 }
 
+output "database_subnet_group" {
+  description = "ID of database subnet group"
+  value       = "${module.vpc.database_subnet_group}"
+}
+
 output "id" {
   description = "VPC id"
   value       = "${module.vpc.vpc_id}"
