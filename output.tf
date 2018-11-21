@@ -37,3 +37,8 @@ output "vpc_main_route_table_id" {
   description = "The ID of the main route table associated with this VPC"
   value       = ["${module.vpc.vpc_main_route_table_id}"]
 }
+
+output "natgw_ids" {
+  description = "List of NAT Gateway IDs"
+  value       = ["${module.vpc.natgw_ids}"]
+}
