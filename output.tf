@@ -18,6 +18,31 @@ output "database_subnet_group" {
   value       = "${module.vpc.database_subnet_group}"
 }
 
+output "elasticache_subnets" {
+  description = "List of IDs of elasticache subnets"
+  value       = ["${module.vpc.elasticache_subnets}"]
+}
+
+output "elasticache_subnet_group" {
+  description = "ID of elasticache subnet group"
+  value       = "${module.vpc.elasticache_subnet_group}"
+}
+
+output "elasticache_subnet_group_name" {
+  description = "Name of elasticache subnet group"
+  value       = "${module.vpc.elasticache_subnet_group_name}"
+}
+
+output "intra_subnets" {
+  description = "List of IDs of intra subnets"
+  value       = ["${module.vpc.intra_subnets}"]
+}
+
+output "redshift_subnets" {
+  description = "List of IDs of redshift subnets"
+  value       = ["${module.vpc.redshift_subnets}"]
+}
+
 output "id" {
   description = "VPC id"
   value       = "${module.vpc.vpc_id}"
