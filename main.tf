@@ -18,6 +18,10 @@ module "vpc" {
   create_database_subnet_group = "${var.create_database_subnet_group}"
   database_subnets             = ["${var.database_subnets}"]
 
+  redshift_subnets    = ["${var.redshift_subnets}"]
+  elasticache_subnets = ["${var.elasticache_subnets}"]
+  intra_subnets       = ["${var.intra_subnets}"]
+
   enable_nat_gateway = "${var.enable_nat_gateway}"
   single_nat_gateway = "${var.single_nat_gateway}"
   enable_vpn_gateway = "${var.enable_vpn_gateway}"

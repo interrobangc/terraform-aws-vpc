@@ -42,6 +42,24 @@ variable "database_subnets" {
   default     = ["10.0.201.0/24", "10.0.202.0/24"]
 }
 
+variable "redshift_subnets" {
+  type        = "list"
+  description = "A list of redshift subnets"
+  default     = []
+}
+
+variable "elasticache_subnets" {
+  type        = "list"
+  description = "A list of elasticache subnets"
+  default     = []
+}
+
+variable "intra_subnets" {
+  type        = "list"
+  description = "A list of intra subnets"
+  default     = []
+}
+
 variable "enable_nat_gateway" {
   description = "Should be true if you want to provision NAT Gateways for each of your private networks"
   default     = true
