@@ -4,7 +4,7 @@ variable "env" {
 }
 
 variable "azs" {
-  type        = "list"
+  type        = list
   description = "A list of availability zones in the region"
   default     = ["us-west-2a", "us-west-2b"]
 }
@@ -20,13 +20,13 @@ variable "cidr" {
 }
 
 variable "private_subnets" {
-  type        = "list"
+  type        = list
   description = "A list of private subnets inside the VPC"
   default     = ["10.0.1.0/24", "10.0.2.0/24"]
 }
 
 variable "public_subnets" {
-  type        = "list"
+  type        = list
   description = "A list of public subnets inside the VPC"
   default     = ["10.0.101.0/24", "10.0.102.0/24"]
 }
@@ -37,25 +37,25 @@ variable "create_database_subnet_group" {
 }
 
 variable "database_subnets" {
-  type        = "list"
+  type        = list
   description = "A list of database subnets"
   default     = ["10.0.201.0/24", "10.0.202.0/24"]
 }
 
 variable "redshift_subnets" {
-  type        = "list"
+  type        = list
   description = "A list of redshift subnets"
   default     = []
 }
 
 variable "elasticache_subnets" {
-  type        = "list"
+  type        = list
   description = "A list of elasticache subnets"
   default     = []
 }
 
 variable "intra_subnets" {
-  type        = "list"
+  type        = list
   description = "A list of intra subnets"
   default     = []
 }
